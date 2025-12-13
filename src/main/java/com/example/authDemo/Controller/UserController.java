@@ -1,9 +1,6 @@
 package com.example.authDemo.Controller;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin
@@ -13,5 +10,10 @@ public class UserController {
     @GetMapping("/getAll")
     public String getUsers() {
         return "List of users";
+    }
+
+    @PostMapping("/login")
+    public String loginUser() {
+        return "User logged in";
     }
 }
