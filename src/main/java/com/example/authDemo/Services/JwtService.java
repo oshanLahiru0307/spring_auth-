@@ -27,7 +27,7 @@ public class JwtService {
     //method to generate JWT token
     public String getJwtToken() {
         return Jwts.builder()
-                .subject("exampleUser")// add username for the token
+                .subject("oshan23")// add username for the token
                 .issuedAt(new Date(System.currentTimeMillis()))
                 .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10)) // 10 hours
                 .signWith(secretKey)
