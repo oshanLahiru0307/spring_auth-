@@ -24,10 +24,6 @@ public class UserController {
         return "List of users";
     }
 
-    @PostMapping("/login")
-    public String loginUser() {
-        return " Login Successful. Token: " + jwtService.getJwtToken();
-    }
 
     @PostMapping("/getUsername")
     public String getUsernameFromToken(@RequestParam String token) {
